@@ -3,9 +3,9 @@ import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } fro
 export const theme: ThemeUserConfig = {
   // === Basic configuration ===
   /** Title for your website. Will be used in metadata and as browser tab title. */
-  title: 'Astro Theme Pure',
+  title: "K1tyoo' ink",
   /** Will be used in index page & copyright declaration */
-  author: 'Pure Lab',
+  author: "K1tyoo",
   /** Description metadata for your website. Can be used in page metadata. */
   description: 'Stay hungry, stay foolish',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
@@ -48,7 +48,7 @@ export const theme: ThemeUserConfig = {
   header: {
     menu: [
       { title: 'Blog', link: '/blog' },
-      { title: 'Docs', link: '/docs/list' },
+      // { title: 'Docs', link: '/docs/list' },
       { title: 'Projects', link: '/projects' },
       { title: 'Links', link: '/links' },
       { title: 'About', link: '/about' }
@@ -59,13 +59,13 @@ export const theme: ThemeUserConfig = {
   footer: {
     // Registration information for ICP (optional)
     registration: {
-      url: 'https://icp.gov.moe/?keyword=APTX4869',
-      text: 'Moe ICP APTX4869'
+      url: 'https://beian.miit.gov.cn/',
+      text: '湘ICP备2024081563号-1'
     },
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://astro.build/chat' }
+    social: { github: 'https://github.com/k1tyoodev', email: 'mailto:cn.danieldev@gmail.com' }
   },
 
   content: {
@@ -89,8 +89,8 @@ export const integ: IntegrationUserConfig = {
     applyTip: {
       name: theme.title,
       desc: theme.description || 'Null',
-      url: 'https://astro-pure.js.org',
-      avatar: 'https://astro-pure.js.org/favicon/favicon.ico'
+      url: 'https://k1tyoo.ink',
+      avatar: 'https://shorturl.at/CqmcM'
     }
   },
   // Enable page search function
@@ -98,11 +98,11 @@ export const integ: IntegrationUserConfig = {
   // Add a random quote to the footer (default on homepage footer)
   quote: {
     // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
-    // server: 'https://v1.hitokoto.cn/?c=i',
-    // target: (data) => (data as { hitokoto: string }).hitokoto || 'Error'
+    server: 'https://v1.hitokoto.cn/?c=a',
+    target: `(data) => (data as { hitokoto: string }).hitokoto || 'Error'`
     // https://github.com/lukePeavey/quotable
-    server: 'https://api.quotable.io/quotes/random?maxLength=60',
-    target: `(data) => data[0].content || 'Error'`
+    // server: 'https://api.quotable.io/quotes/random?maxLength=60',
+    // target: `(data) => data[0].content || 'Error'`
   },
   // Tailwindcss typography
   typography: {
